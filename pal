@@ -1,0 +1,14 @@
+temp=n=int(input("Enter a Number:\n"))
+list1=[i for i in range(2,n+1) if all(i%j!=0 for j in range(2,i))]
+list3=[]
+i=0
+while temp!=0 and i<len(list1):
+    prime=list1[i]
+    if(temp%prime==0):
+        a=0
+        while(temp%prime==0):
+            a+=1
+            temp=temp/prime
+        list3.append((prime,a))
+    i+=1
+print(list3)
